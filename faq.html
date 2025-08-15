@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Capgemini Invent</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Verdana:wght@400&display=swap');
+
+        body {
+            font-family: 'Verdana', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #343a40;
+            text-align: center;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0072C6, #00A3E0);
+            color: white;
+            padding: 50px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header-logo {
+            max-width: 120px;
+            margin-bottom: 20px;
+        }
+
+        .info-text {
+            font-size: 0.9em;
+            margin: 10px 0;
+        }
+
+        .redirect-button {
+            background-color: #66B2E0; /* Lighter blue */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px; /* Add some space above the button */
+        }
+
+        .redirect-button:hover {
+            background-color: #4a9bcf; /* Darker shade on hover */
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eaeaea;
+            padding: 15px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none; /* Remove border from last item */
+        }
+
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #0072C6; /* Primary color for questions */
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover {
+            color: #005ea6; /* Darker shade on hover */
+        }
+
+        .faq-answer {
+            display: none; /* Initially hidden */
+            margin-top: 10px;
+            font-size: 1em;
+            color: #666; /* Lighter color for answers */
+            text-align: left; /* Align text to the left for better readability */
+        }
+
+        .faq-answer ul {
+            list-style-type: decimal; /* Use decimal bullets for checklist */
+            padding-left: 20px; /* Indent the checklist */
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #666;
+            padding: 20px 0;
+        }
+
+        .signature {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.2em;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #0072C6;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const questions = document.querySelectorAll('.faq-question');
+            questions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <img src="https://latestlogo.com/wp-content/uploads/2024/02/capgemini-white.png" alt="Capgemini Logo" class="header-logo"> <!-- Using the new logo -->
+        <h1>Frequently Asked Questions</h1>
+        <p class="info-text">Find answers to common questions below.</p>
+        <!-- Redirect Button placed in the header -->
+        <button class="redirect-button" onclick="window.location.href='index.html';">Homepage</button>
+    </header>
+
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">What is Capgemini Invent and what are its tribes and specialisations?</div>
+            <div class="faq-answer">
+                Capgemini Invent is the consulting, digital transformation, and innovation arm of Capgemini Group. It helps businesses innovate and transform through digital solutions and strategies. Capgemini Invent is organised into various tribes, each focusing on specific areas of expertise:
+                <ul style="text-align: left;">
+                    <li><strong>Digital Transformation:</strong> Focuses on helping clients adapt to digital technologies.</li>
+                    <li><strong>Customer Engagement:</strong> Specialises in enhancing customer experience through digital channels.</li>
+                    <li><strong>Data & Analytics:</strong> Provides insights and analytics solutions to drive business decisions.</li>
+                    <li><strong>Technology and Engineering:</strong> Offers support in implementing advanced technology solutions.</li>
+                    <li><strong>Sustainability:</strong> Works on integrating sustainable practices into business strategies.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How can I access the resources?</div>
+            <div class="faq-answer">Resources can be accessed through the dedicated resources page, where you can find links to various tools and platforms.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">I cannot log into one of the portals, what do I do?</div>
+            <div class="faq-answer">Do not fret, in my first week I was not able to access a few of the portals (i.e. Concur, MyRewards). IT will roll out access to these sites over time. It took over a week for me to gain access to Concur, in personal experience.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">I don't know my password for a portal, how do I log in?</div>
+            <div class="faq-answer">A lot of the portals are SSO-based, so if you are logged into your Talent Capgemini account, you will be able to access them (i.e. Replicon, Workzone). However, some of the other portals require you to enter your work email address before requesting a new password (i.e. Expedia, MyRewards).</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Do I get a work phone?</div>
+            <div class="faq-answer">As of August 2025, Capgemini has transitioned to a BYOP scheme. They no longer provide work phone devices, though you may be able to request one depending on your assigned project.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">What is mandatory training & how do I access it?</div>
+            <div class="faq-answer">Mandatory training includes essential online courses that all employees must complete for compliance and skill development. If you have recently joined Capgemini (prior to October 2025), you will not be able to access these courses as the platform they are hosted on is changing. You will be able to complete these courses from October 2025 onwards.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">I'm overwhelmed, what do I do first?</div>
+            <div class="faq-answer">
+                1. Set up your work laptop: 
+                <a href="https://sway.cloud.microsoft/bxmIvaGr8ZM6rkao" target="_blank">Windows</a> or 
+                <a href="https://sway.cloud.microsoft/bTwirXmNb0t7RN3z" target="_blank">Mac</a>.
+                <br>
+                2. Check your employee details & submit your P45 to the Payroll Team (in your Outlook email).
+                <br>
+                3. Log the portals you have access to (i.e. Talent, Workzone, GTD, Replicon) & bookmark them.
+                <br>
+                4. Sign up for the <a href="https://capgeminimentoring.chronus.com/p/p11?src=side_navigation" target="_blank">Buddy Program</a>. This is a great way to meet people within or outside your tribe!
+                <br>
+                5. Familiarise yourself with Teams & Outlook. This will be your primary source of contact with colleagues.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="signature">Get the future you want</p>
+        &copy; 2023 Capgemini Invent. All rights reserved.
+    </footer>
+</body>
+</html>

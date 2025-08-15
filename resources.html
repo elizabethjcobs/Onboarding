@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Verdana:wght@400&display=swap');
+
+        body {
+            font-family: 'Verdana', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #343a40;
+            text-align: center;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0072C6, #00A3E0);
+            color: white;
+            padding: 50px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header-logo {
+            max-width: 120px;
+            margin-bottom: 20px;
+        }
+
+        .info-text {
+            font-size: 0.9em;
+            margin: 10px 0;
+        }
+
+        .redirect-button {
+            background-color: #66B2E0; /* Lighter blue */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px; /* Add some space above the button */
+        }
+
+        .redirect-button:hover {
+            background-color: #4a9bcf; /* Darker shade on hover */
+        }
+
+        .hub {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px auto;
+            width: 80%; /* Make it responsive */
+            max-width: 800px; /* Increased size for more space */
+        }
+
+        .hub-image {
+            width: 120px; /* Adjust the size as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 40px; /* Space below the logo */
+            transition: transform 0.2s; /* Add transition for hover effect */
+        }
+
+        .hub-image:hover {
+            transform: scale(1.02); /* Slightly increase size on hover */
+        }
+
+        .resource-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns */
+            gap: 20px; /* Space between circles */
+            width: 100%;
+        }
+
+        .resource-circle {
+            background: white;
+            border: 2px solid #0072C6;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s; /* Reduced transition time */
+        }
+
+        .resource-circle:hover {
+            background-color: #00B2A2; /* Teal color on hover */
+            transform: scale(1.05); /* Slightly increase size on hover */
+        }
+
+        .resource-title {
+            font-size: 1em;
+            color: #0072C6; /* Default text color */
+            margin: 0;
+        }
+
+        .resource-title a {
+            color: #0072C6; /* Default link color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .resource-circle:hover .resource-title a {
+            color: white; /* Change text color to white on hover */
+        }
+
+        .resource-title a:hover {
+            text-decoration: underline;
+        }
+
+        .tooltip {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0072C6;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            width: 200px;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .resource-circle:hover .tooltip {
+            display: block;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .signature {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.2em;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #0072C6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://latestlogo.com/wp-content/uploads/2024/02/capgemini-white.png" alt="Capgemini Logo" class="header-logo"> <!-- Using the new logo -->
+        <h1>Resources</h1>
+        <p class="info-text">Hover over each resource to view a summary of the associated website.</p>
+        <p class="info-text">You can also access each resource from this page.</p>
+        <!-- Redirect Button placed in the header -->
+        <button class="redirect-button" onclick="window.location.href='index.html';">Homepage</button>
+    </header>
+
+    <div class="hub">
+        <img src="https://github.com/elizabethjcobs/Onboarding/raw/main/cap.png" alt="Links" class="hub-image">
+        
+        <div class="resource-container">
+            <div class="resource-circle resource1">
+                <h3 class="resource-title"><a href="https://degreed.com/plan/3153377?newWindow=true" target="_blank">Next Onboarding</a></h3>
+                <div class="tooltip">Interactive courses designed to take you through essential onboarding activities (i.e. Onboarding, Mandatory Training, Buddy System, PM Check-Ins).</div>
+            </div>
+            <div class="resource-circle resource2">
+                <h3 class="resource-title"><a href="https://talent.capgemini.com/uk/" target="_blank">Talent Capgemini</a></h3>
+                <div class="tooltip">One-stop shop for all essential links.</div>
+            </div>
+            <div class="resource-circle resource3">
+                <h3 class="resource-title"><a href="https://app.whoz.com/auth/realms/whoz/protocol/openid-connect/auth?client_id=whoz&redirect_uri=https%3A%2F%2Fapp.whoz.com%2Fworkspace%2F66fa9d08df4e260865455b8a%2Fpersonal%2Fyour%2Fdashboard&state=734a8a8a-0e47-4c07-9996-18bd4e86f3e4&response_mode=fragment&response_type=code&scope=openid&nonce=6c1a827c-8f3c-477d-b3e8-8aebf3c9ae19&code_challenge=IFinxI1xviK_bskb-NTZzISBaruSI0evKVABKmx-DNM&code_challenge_method=S256" target="_blank">Workzone</a></h3>
+                <div class="tooltip">Access HR tools and resources to manage your career (i.e. Employee info, MyBenefits, MyExpenses, HR Ticket, Support & more).</div>
+            </div>
+            <div class="resource-circle resource4">
+                <h3 class="resource-title"><a href="https://eu3.replicon.com/Capgemini/home/" target="_blank">TimeSheet Manager (Replicon)</a></h3>
+                <div class="tooltip">You need to submit your timesheets weekly before Friday. You will either have an Onboarding/Project/Bench code to input.</div>
+            </div>
+            <div class="resource-circle resource5">
+                <h3 class="resource-title"><a href="https://app.whoz.com/workspace/66fa9d08df4e260865455b8a/personal/your/dashboard" target="_blank">Global Talent Deployment (GTD)</a></h3>
+                <div class="tooltip">Keep your profile updated with skills/experience for project recruitment.</div>
+            </div>
+            <div class="resource-circle resource6">
+                <h3 class="resource-title"><a href="https://www.egencia.co.uk/auth/v1/login?call-back-url=aHR0cHM6Ly93d3cuZWdlbmNpYS5jby51ay9ob21lLz9sb2NhbGU9ZW5fR0I%3D&isRedirected=true#flight-search" target="_blank">Egencia (Travel & Accommodation)</a></h3>
+                <div class="tooltip">Portal to book company travel & accommodation.</div>
+            </div>
+            <div class="resource-circle resource7">
+                <h3 class="resource-title"><a href="https://www.lumos-invent.com/" target="_blank">LUMOS Invent</a></h3>
+                <div class="tooltip">Capgemini Invent's secure ChatGPT tool & retrieveable database for international company documents.</div>
+            </div>
+            <div class="resource-circle resource8">
+                <h3 class="resource-title"><a href="https://www.lumos-invent.com/" target="_blank">tba when site is fixed (HIVE)</a></h3>
+                <div class="tooltip">Capgemini Invent's secure ChatGPT tool & retrieveable database for international company documents.</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="signature">Get the future you want</p>
+        &copy; 2023 Capgemini Invent. All rights reserved.
+    </footer>
+</body>
+</html>
